@@ -1,0 +1,160 @@
+assumption_id,category,value,unit,description,rationale,source,VERIFIED_AGAINST_CASE_TEXT
+A001,Calendar,2026,year,Synthetic calendar year for Jan-Jun data,Case gives month/day events but no data year,MY ASSUMPTION,N
+A002,Randomness,42,seed,Fixed pseudo-random seed,Reproducibility,MY ASSUMPTION,N
+A003,Volume,26000000,bottles,Jan-Feb uncensored demand,Annual non-summer volume spread evenly across eight non-summer months then scaled to two months,MY ASSUMPTION,N
+A004,Demand shape,0.08,coefficient of variation,Daily log-normal demand noise before exact volume apportionment,Realistic but deterministic daily variation,MY ASSUMPTION,N
+A005,Demand shape,0.06,fraction,Weekend uplift applied to daily demand weights,Simple channel-agnostic calendar seasonality,MY ASSUMPTION,N
+A006,Viral propagation,0.35,fraction,GT/MT spillover of the DP QC viral uplift above baseline,Only QC 4x is given; other-channel response is a proxy,MY ASSUMPTION,N
+A007,Planning,2026-03-31,date,Date planners notice the viral shortage,Distributor-reported shortage timing is not precisely dated in the case,MY ASSUMPTION,N
+A008,Censoring,0.80,relative weight,DP viral-period stock-out pressure before closure,Relative loss weights are scaled to the case total loss,MY ASSUMPTION,N
+A009,Censoring,0.95,relative weight,DP and PP closure-period stock-out pressure,Relative loss weights are scaled to the case total loss,MY ASSUMPTION,N
+A010,Censoring,0.25,relative weight,Dragonfruit Bloom closure-period stock-out pressure,Imported-pulp vulnerability is plausible but not quantified in the case,MY ASSUMPTION,N
+A011,Censoring,0.50,relative weight,MPB/GC stock-out pressure in short depots,Regional imbalance is described but not quantified,MY ASSUMPTION,N
+A012,Air freight,2026-05-17,date,Emergency air-freight booking date,Closure week 2 as required by the case narrative,MY ASSUMPTION,N
+A013,Air freight,3,days,Booking-to-arrival lag for emergency air pulp,No air transit time is specified,MY ASSUMPTION,N
+A014,Pulp cover,21,days,Passionfruit physical cover before the viral ramp,A starting point is needed to show cover erosion; only cover at closure is given,MY ASSUMPTION,N
+A015,Production,1.20,multiplier,DP scheduled production uplift in April after planner notice,Monthly replanning response is not quantified,MY ASSUMPTION,N
+A016,Production,0.50,multiplier,Passionfruit Punch scheduled production factor in May-Jun,Represents a cut to protect Dragon Passion,MY ASSUMPTION,N
+A017,Production,1.50,multiplier,Dragon Passion scheduled production factor in May-Jun,Represents protection during shortage,MY ASSUMPTION,N
+A018,Production,0.60,fraction,Share of freed passionfruit-line volume reassigned to MPB; remainder to GC,Plants remain at 95% while flavor mix is constrained,MY ASSUMPTION,N
+A019,Depot sheets,1,days,Lag from weekly snapshot to planner availability,Separate spreadsheet handling adds a small administrative lag,MY ASSUMPTION,N
+A025,GT proxy,0.15,coefficient of variation,Distributor-order noise around latent GT demand,Orders are a leading proxy not outlet truth,MY ASSUMPTION,N
+A026,Recovery,14,days,Passionfruit inventory rebuild horizon after road reopening,Inventory recovery is not specified,MY ASSUMPTION,N
+A027,Launch gate,7,days,Buffer added to supplier lead time in launch-readiness gate,User requirement leaves buffer size editable,MY ASSUMPTION,N
+A028,Planning,30.4375,days per month,Monthly-to-weekly capacity conversion,Average Gregorian month; used only for planning rates,MY ASSUMPTION,N
+A029,Buffer economics,0.18,annual fraction,Frozen-pulp working-capital and handling carrying rate,No financing or cold-storage rate is supplied,MY ASSUMPTION,N
+A030,Buffer economics,0.08,annual fraction,Cold-storage and handling share of pulp value,Separate storage cost sensitivity,MY ASSUMPTION,N
+A031,Closure scenarios,0.25,conditional probability,One-week closure weight given a closure occurs,Case supplies only annual likelihood of at least one week,MY ASSUMPTION,N
+A032,Closure scenarios,0.35,conditional probability,Two-week closure weight given a closure occurs,Scenario weight for expected-loss calculation,MY ASSUMPTION,N
+A033,Closure scenarios,0.40,conditional probability,Three-week closure weight given a closure occurs,Scenario weight for expected-loss calculation,MY ASSUMPTION,N
+A034,Demand scenarios,0.50,fraction,GT/MT spillover used in forward viral stress scenarios,Forward stress test is deliberately not a forecast of GT outlet demand,MY ASSUMPTION,N
+A035,Transfers,0.70,fraction,Share of transferred deficit bottles assumed to become realised sales,Conservative transfer benefit conversion,MY ASSUMPTION,N
+A036,Air economics,TOTAL_DELIVERED_COST,cost basis rule,Air cost is modeled as five times total normal delivered pulp cost for the emergency lot,Interpretation needed to infer emergency lot kilograms from Rs3.2 cr,MY ASSUMPTION,N
+A037,Data quality,20,percent,Base low/high scenario half-width when all feeds are fresh,Uncertainty is not estimated from a live forecasting system,MY ASSUMPTION,N
+A038,Data quality,40,percent,Widened low/high scenario half-width when QC or depot data is stale/missing,Explicit graceful-degradation rule,MY ASSUMPTION,N
+A039,Detector,5,days,Minimum history before daily QC alerts can fire,Prevents alerts on a launch day's tiny denominator,MY ASSUMPTION,N
+A040,Reforecast,4,weeks,Rolling history for weekly next-week reforecast,Short enough to respond while smoothing daily noise,MY ASSUMPTION,N
+A041,Demand scenarios,28,days,Recent history used to set forward scenario baseline,Four-week demand-sensing window,MY ASSUMPTION,N
+A042,Viral propagation,2.50,multiplier,Immediate DP QC multiplier on the reel date before rising to 4x by day 14,Front-loaded influencer response; the case specifies the 4x endpoint and duration but not the path,MY ASSUMPTION,N
+A043,Delisting risk,1.0,weight,GT unmet-demand risk weight for shortage-allocation comparison,Relative score only; no GT outlet data is available,MY ASSUMPTION,N
+A044,Delisting risk,2.0,weight,MT unmet-demand risk weight for shortage-allocation comparison,Higher relative delisting/shelf-reset exposure,MY ASSUMPTION,N
+A045,Delisting risk,3.0,weight,QC unmet-demand risk weight for shortage-allocation comparison,Highest relative platform ranking/delisting exposure,MY ASSUMPTION,N
+A046,Buffer economics,4,weeks,Maximum additional frozen-pulp buffer evaluated (0-4 week options),Within six-month frozen shelf life and laptop-friendly search,MY ASSUMPTION,N
+A047,Loss attribution,0.25,fraction,Low/high sensitivity around the allocated lost-contribution component of each root cause,Case totals are fixed; only root-cause allocation is uncertain; fixed air/write-off values are not flexed,MY ASSUMPTION,N
+A048,Scenario replay,2026-05-03,date,Manual landslide/weather route-risk input in the counterfactual replay,Illustrates an early-warning workflow; it is not a real weather forecast or external feed,MY ASSUMPTION,N
+A049,Scenario replay,2026-05-10,date,Earlier human-approved air booking in the counterfactual,Triggered by manual route warning and cover gate rather than waiting until closure week 2,MY ASSUMPTION,N
+A050,Scenario replay,2026-03-01,date,Counterfactual frozen-buffer preposition date,Assumes the model and approvals were in place before peak,MY ASSUMPTION,N
+A051,Scenario replay,2026-05-09,date,COO deadline for shortage-allocation choice in the counterfactual,Allows a decision before the simulated closure,MY ASSUMPTION,N
+A052,Inventory control,14,days,Below-target cover threshold for SHORT inventory flag,Two-thirds of the case 21-day depot target,MY ASSUMPTION,N
+A053,Inventory control,35,days,Above-target cover threshold for OVERSTOCK inventory flag,Five weeks signals excess versus the case 21-day target,MY ASSUMPTION,N
+A054,Data quality,7,days,Maximum weekly depot-sheet age before STALE flag,Matches the weekly operating cadence,MY ASSUMPTION,N
+A055,Depot sheets,Monday,weekday,Weekly depot-stock snapshot day,Case specifies weekly snapshots but no weekday,MY ASSUMPTION,N
+A056,Pulp inbound,1,flag,Regular inbound is smoothed into daily receipts for the synthetic balance,Daily order-batch detail is not needed for the prototype and no order calendar is supplied,MY ASSUMPTION,N
+A057,Production,1,flag,Jan-Feb production equals monthly latent demand by flavor,Preseason production is not specified; summer output separately reconciles to 95%,MY ASSUMPTION,N
+A058,Production,0.50,fraction,Plant 01 share of combined actual production; Plant 02 receives remainder,Only combined two-plant capacity is supplied,MY ASSUMPTION,N
+A059,Transfers,same_region=2;cross_region=4,days,Mapping of transfer duration within the case 2-4 day range,Specific lane distances are not supplied,MY ASSUMPTION,N
+A060,Demand scenarios,8,weeks,Forward scenario horizon used in the application,Supports rolling S&OP without implying a long-range forecast,MY ASSUMPTION,N
+A061,Demand scenarios,Monday,week start,Forward scenario and reforecast weeks start on Monday,Consistent weekly planning calendar,MY ASSUMPTION,N
+A062,Forecast synthesis,alternating +/-30%,rule,Monthly flavor-depot forecasts alternate above/below actual at exactly 30% absolute error,Reproduces case WAPE while avoiding a claim about the unknown bias pattern,MY ASSUMPTION,N
+A063,Forecast synthesis,first_day_of_month,date rule,Monthly forecast issue date,Case says monthly updates but not the issue day,MY ASSUMPTION,N
+A064,Shortage allocation,proportional,rule,Within each flavor available pulp supports the same service fraction in every channel,Channel risk is reported separately; no hidden automatic channel prioritisation,MY ASSUMPTION,N
+A065,Exposure scoring,route_single=1/0.5;source_single=1/0.5;red=0.50;amber=0.20,rule,Fragility weights and thresholds for exposure-map traffic lights,Relative screening heuristic rather than a calibrated probability,MY ASSUMPTION,N
+A066,Alert governance,1,days,Demand-planner action SLA after first Red,Ownership deadline is a proposed operating rule,MY ASSUMPTION,N
+A067,Rival event,42,days after viral start,Exact synthetic rival launch date for replay,Case says within six weeks but gives no date,MY ASSUMPTION,N
+A068,Write-off synthesis,AGING_STOCK_CALIBRATE_TO_CASE,allocation rule,Allocate FIFO stock-aging write-offs and calibrate their common value scale to the case target,Aging determines eligible bottles and relative allocation; Rs6 cr is only a calibration target and the raw gap is reported,MY ASSUMPTION,N
+A069,Production synthesis,latent_daily_demand_shape,rule,Daily production allocation within each monthly flavor target,Preserves exact monthly capacity while avoiding a flat artificial production curve,MY ASSUMPTION,N
+A071,Depot stock aging,7,days,Age of opening depot-stock batches on 1 January,No batch manufacturing dates are supplied; subsequent batches use actual production dates and FIFO,MY ASSUMPTION,N
+A072,Write-off valuation,1.0,fraction of bottle price,Uncalibrated valuation of bottles breaching a channel remaining-shelf cutoff,Case combines write-offs and discounts without a valuation split; a common calibration factor and raw gap are disclosed,MY ASSUMPTION,N
+BOM_001,BOM,0.105,kg/bottle,MPB requires MANGO,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_002,BOM,0.035,kg/bottle,MPB requires PEACH,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_003,BOM,0.01,kg/bottle,MPB requires BASIL,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_004,BOM,0.145,kg/bottle,GC requires GUAVA,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_005,BOM,0.005,kg/bottle,GC requires CHILLI,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_006,BOM,0.15,kg/bottle,PP requires PASSION,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_007,BOM,0.09,kg/bottle,DB requires DRAGON_DOM,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_008,BOM,0.06,kg/bottle,DB requires DRAGON_IMP,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_009,BOM,0.054,kg/bottle,DP requires DRAGON_DOM,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_010,BOM,0.036,kg/bottle,DP requires DRAGON_IMP,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+BOM_011,BOM,0.06,kg/bottle,DP requires PASSION,BOM coefficients are not specified in the case,MY ASSUMPTION,N
+AVAILABILITY_MPB,Flavor availability,01-01,month-day,Mango Peach Basil is available from this synthetic date,Existing-flavor preseason availability is not specified,MY ASSUMPTION,N
+AVAILABILITY_GC,Flavor availability,01-01,month-day,Guava Chilli is available from this synthetic date,Existing-flavor preseason availability is not specified,MY ASSUMPTION,N
+AVAILABILITY_PP,Flavor availability,01-01,month-day,Passionfruit Punch is available from this synthetic date,Existing-flavor preseason availability is not specified,MY ASSUMPTION,N
+AVAILABILITY_DB,Flavor availability,01-01,month-day,Dragonfruit Bloom is available from this synthetic date,Existing-flavor preseason availability is not specified,MY ASSUMPTION,N
+FEED_GT,Channel data visibility,marketing=Monthly distributor orders; planner=Month-end consolidated; outlet=0,config,Feed assumptions for General Trade,Only QC daily marketing data and the GT outlet blind spot are case facts,MY ASSUMPTION,N
+FEED_MT,Channel data visibility,marketing=Weekly scan summary; planner=Month-end consolidated; outlet=0,config,Feed assumptions for Modern Trade,Only QC daily marketing data and the GT outlet blind spot are case facts,MY ASSUMPTION,N
+DEPOT_D01,Depot network,0.14,demand weight,Delhi NCR in North; stock profile=OVERSTOCK,"Synthetic depot identities, weights and imbalance profiles",MY ASSUMPTION,N
+DEPOT_D02,Depot network,0.08,demand weight,Lucknow in North; stock profile=SHORT,"Synthetic depot identities, weights and imbalance profiles",MY ASSUMPTION,N
+DEPOT_D03,Depot network,0.16,demand weight,Mumbai in West; stock profile=OVERSTOCK,"Synthetic depot identities, weights and imbalance profiles",MY ASSUMPTION,N
+DEPOT_D04,Depot network,0.09,demand weight,Ahmedabad in West; stock profile=BALANCED,"Synthetic depot identities, weights and imbalance profiles",MY ASSUMPTION,N
+DEPOT_D05,Depot network,0.15,demand weight,Bengaluru in South; stock profile=OVERSTOCK,"Synthetic depot identities, weights and imbalance profiles",MY ASSUMPTION,N
+DEPOT_D06,Depot network,0.12,demand weight,Chennai in South; stock profile=SHORT,"Synthetic depot identities, weights and imbalance profiles",MY ASSUMPTION,N
+DEPOT_D07,Depot network,0.1,demand weight,Hyderabad in South; stock profile=BALANCED,"Synthetic depot identities, weights and imbalance profiles",MY ASSUMPTION,N
+DEPOT_D08,Depot network,0.11,demand weight,Kolkata in East; stock profile=OVERSTOCK,"Synthetic depot identities, weights and imbalance profiles",MY ASSUMPTION,N
+DEPOT_D09,Depot network,0.05,demand weight,Bhubaneswar in East; stock profile=SHORT,"Synthetic depot identities, weights and imbalance profiles",MY ASSUMPTION,N
+PULP_MANGO,Pulp cover,21,days,Opening cover for Mango pulp,Only passionfruit cover at closure is a case fact,MY ASSUMPTION,N
+PULP_PEACH,Pulp cover,21,days,Opening cover for Peach pulp,Only passionfruit cover at closure is a case fact,MY ASSUMPTION,N
+PULP_BASIL,Pulp cover,21,days,Opening cover for Basil extract,Only passionfruit cover at closure is a case fact,MY ASSUMPTION,N
+PULP_GUAVA,Pulp cover,21,days,Opening cover for Guava pulp,Only passionfruit cover at closure is a case fact,MY ASSUMPTION,N
+PULP_CHILLI,Pulp cover,21,days,Opening cover for Chilli extract,Only passionfruit cover at closure is a case fact,MY ASSUMPTION,N
+PULP_PASSION,Pulp cover,21,days,Opening cover for Passionfruit pulp,Only passionfruit cover at closure is a case fact,MY ASSUMPTION,N
+PULP_DRAGON_DOM,Pulp cover,21,days,Opening cover for Domestic dragonfruit pulp,Only passionfruit cover at closure is a case fact,MY ASSUMPTION,N
+PULP_DRAGON_IMP,Pulp cover,42,days,Opening cover for Imported dragonfruit pulp,Only passionfruit cover at closure is a case fact,MY ASSUMPTION,N
+SUPPLIER_SUP_MANGO,Supplier economics,lead=4d; cost=95/kg; qualified=2,config,Primary supplier parameters for MANGO,Costs and non-case supplier/lead-time details are synthetic,MY ASSUMPTION,N
+SUPPLIER_SUP_PEACH,Supplier economics,lead=5d; cost=110/kg; qualified=2,config,Primary supplier parameters for PEACH,Costs and non-case supplier/lead-time details are synthetic,MY ASSUMPTION,N
+SUPPLIER_SUP_BASIL,Supplier economics,lead=7d; cost=450/kg; qualified=1,config,Primary supplier parameters for BASIL,Costs and non-case supplier/lead-time details are synthetic,MY ASSUMPTION,N
+SUPPLIER_SUP_GUAVA,Supplier economics,lead=4d; cost=105/kg; qualified=2,config,Primary supplier parameters for GUAVA,Costs and non-case supplier/lead-time details are synthetic,MY ASSUMPTION,N
+SUPPLIER_SUP_CHILLI,Supplier economics,lead=7d; cost=600/kg; qualified=1,config,Primary supplier parameters for CHILLI,Costs and non-case supplier/lead-time details are synthetic,MY ASSUMPTION,N
+SUPPLIER_SUP_PASSION,Supplier economics,lead=3d; cost=180/kg; qualified=1,config,Primary supplier parameters for PASSION,Costs and non-case supplier/lead-time details are synthetic,MY ASSUMPTION,N
+SUPPLIER_SUP_DRAGON_DOM,Supplier economics,lead=7d; cost=160/kg; qualified=2,config,Primary supplier parameters for DRAGON_DOM,Costs and non-case supplier/lead-time details are synthetic,MY ASSUMPTION,N
+SUPPLIER_SUP_DRAGON_IMP,Supplier economics,lead=49d; cost=220/kg; qualified=1,config,Primary supplier parameters for DRAGON_IMP,Costs and non-case supplier/lead-time details are synthetic,MY ASSUMPTION,N
+ROUTE_R_MANGO,Route risk,transit=4d; closure=0.05,config,Route parameters for Mango road lane,Non-passionfruit route details are synthetic,MY ASSUMPTION,N
+ROUTE_R_PEACH,Route risk,transit=5d; closure=0.05,config,Route parameters for Peach road lane,Non-passionfruit route details are synthetic,MY ASSUMPTION,N
+ROUTE_R_BASIL,Route risk,transit=7d; closure=0.05,config,Route parameters for Basil road lane,Non-passionfruit route details are synthetic,MY ASSUMPTION,N
+ROUTE_R_GUAVA,Route risk,transit=4d; closure=0.05,config,Route parameters for Guava road lane,Non-passionfruit route details are synthetic,MY ASSUMPTION,N
+ROUTE_R_CHILLI,Route risk,transit=7d; closure=0.05,config,Route parameters for Chilli road lane,Non-passionfruit route details are synthetic,MY ASSUMPTION,N
+ROUTE_R_DRAGON_DOM,Route risk,transit=7d; closure=0.1,config,Route parameters for Domestic dragonfruit road lane,Non-passionfruit route details are synthetic,MY ASSUMPTION,N
+ROUTE_R_DRAGON_IMP,Route risk,transit=49d; closure=0.1,config,Route parameters for Dragonfruit import sea-road lane,Non-passionfruit route details are synthetic,MY ASSUMPTION,N
+SEASON_01,Demand shape,0.95,multiplier,Month 1 daily demand weight,Within-season seasonality is not supplied,MY ASSUMPTION,N
+SEASON_02,Demand shape,1.05,multiplier,Month 2 daily demand weight,Within-season seasonality is not supplied,MY ASSUMPTION,N
+SEASON_03,Demand shape,0.9,multiplier,Month 3 daily demand weight,Within-season seasonality is not supplied,MY ASSUMPTION,N
+SEASON_04,Demand shape,1.0,multiplier,Month 4 daily demand weight,Within-season seasonality is not supplied,MY ASSUMPTION,N
+SEASON_05,Demand shape,1.1,multiplier,Month 5 daily demand weight,Within-season seasonality is not supplied,MY ASSUMPTION,N
+SEASON_06,Demand shape,1.0,multiplier,Month 6 daily demand weight,Within-season seasonality is not supplied,MY ASSUMPTION,N
+ALLOC_PROTECT_DP,Shortage allocation,0.7,DP share of available passionfruit pulp,Protect Dragon Passion,Passionfruit Punch delisting and core-GT service risk rises,MY ASSUMPTION,N
+ALLOC_PROTECT_PP,Shortage allocation,0.3,DP share of available passionfruit pulp,Protect Passionfruit Punch,Lower contribution per passionfruit kg and higher rival-share loss,MY ASSUMPTION,N
+ALLOC_BALANCED,Shortage allocation,0.55,DP share of available passionfruit pulp,Balance launch and incumbent,Neither flavor is fully protected; requires explicit COO trade-off,MY ASSUMPTION,N
+SUPPLY_OPTION_PREBUY_BUFFER,Supply option economics,cost=0.0cr; loss_reduction=0.0; air_reduction=0.0,config,Pre-buy frozen pulp buffer,Cost and benefit are calculated by the buffer optimiser; pulp principal is disclosed as working capital,MY ASSUMPTION,N
+SUPPLY_OPTION_SECOND_SUPPLIER,Supply option economics,cost=0.45cr; loss_reduction=0.65; air_reduction=0.0,config,Qualify second passionfruit supplier,Assumes a qualified alternate uses a different geography/route; procurement must not be measured on Rs/kg alone,MY ASSUMPTION,N
+SUPPLY_OPTION_CO_PACKER,Supply option economics,cost=0.2cr; loss_reduction=0.05; air_reduction=0.0,config,Pre-book co-packer headroom,Only helps capacity-constrained losses; it cannot create passionfruit pulp during a route closure,MY ASSUMPTION,N
+SUPPLY_OPTION_AIR_TRIGGER,Supply option economics,cost=0.15cr; loss_reduction=0.35; air_reduction=0.2,config,Pre-book air-freight trigger,Earlier smaller lots and trigger governance; emergency freight remains a fallback not a primary buffer,MY ASSUMPTION,N
+ATTRIBUTION_LATE_SENSING,Loss attribution and capture,contribution_share=0.35; air_share=0.0; writeoff_share=0.0; capture=0.25/0.45/0.65,shares,Late demand sensing,QC was daily to marketing but month-end to planners; model Red precedes planner notice,MY ASSUMPTION,N
+ATTRIBUTION_ROUTE_SINGLE_SOURCE,Loss attribution and capture,contribution_share=0.35; air_share=1.0; writeoff_share=0.0; capture=0.3/0.55/0.75,shares,Single-source and route fragility,One qualified hill cooperative; one road; 60% annual closure likelihood; Rs3.2 cr air spend,MY ASSUMPTION,N
+ATTRIBUTION_LAUNCH_HANDOFF,Loss attribution and capture,contribution_share=0.15; air_share=0.0; writeoff_share=0.0; capture=0.4/0.65/0.85,shares,Launch handoff and readiness,Two-week launch notice versus 6-8 week imported dragonfruit lead; no second passionfruit supplier,MY ASSUMPTION,N
+ATTRIBUTION_STALE_DEPOT_MIX,Loss attribution and capture,contribution_share=0.15; air_share=0.0; writeoff_share=1.0; capture=0.2/0.4/0.6,shares,Stale depot allocation mix,Three-week cover based on last-year mix; simultaneous overstocks and shortages; Rs6 cr write-offs/discounts,MY ASSUMPTION,N
+BUDGET_BUILD,First-year budget,0.35,Rs cr,Vendor-run demand/supply configuration and build (selected=1),"Config-driven modules, reusable package, no data/AI hire",MY ASSUMPTION,N
+BUDGET_VENDOR_IT,First-year budget,0.2,Rs cr,Vendor IT integration and QC/Excel ingestion (selected=1),"QC feed, weekly depot workbook, ERP import/export; no external API in prototype",MY ASSUMPTION,N
+BUDGET_CLOUD_RUN,First-year budget,0.12,Rs cr,Cloud and vendor year-1 operations (selected=1),Small managed deployment; laptop prototype uses open-source libs,MY ASSUMPTION,N
+BUDGET_TRAINING,First-year budget,0.12,Rs cr,Change management and training for 15 planners (selected=1),"Role-based practice, parallel run, one owner per alert",MY ASSUMPTION,N
+BUDGET_WEEKLY_SOP,First-year budget,0.1,Rs cr,Weekly peak S&OP facilitation (selected=1),Weekly during peak; monthly cadence remains outside peak,MY ASSUMPTION,N
+BUDGET_EXCEL_ADOPTION,First-year budget,0.08,Rs cr,Excel templates and nine-depot onboarding (selected=1),"Import/export, sheet validation, fallback drills and hypercare",MY ASSUMPTION,N
+BUDGET_SECOND_SUPPLIER,First-year budget,0.45,Rs cr,Qualify alternate passionfruit supplier (selected=1),Selected within-cash-cap supply option; different geography/route assumption,MY ASSUMPTION,N
+BUDGET_AIR_TRIGGER,First-year budget,0.15,Rs cr,Pre-book air-freight trigger and vendor retainer (selected=1),Fallback only; earlier/smaller emergency lots,MY ASSUMPTION,N
+BUDGET_CO_PACKER,First-year budget,0.2,Rs cr,Optional co-packer retainer (selected=0),Not selected: negative route-only economics and cannot solve pulp shortage,MY ASSUMPTION,N
+BUDGET_BUFFER_WORKING_CAPITAL,First-year budget,0.0,Rs cr,Optional one-week frozen-pulp buffer principal (selected=0),Not in selected package; model-calculated principal shown separately on Supply page,MY ASSUMPTION,N
+BUDGET_CONTINGENCY,First-year budget,0.2,Rs cr,Programme contingency and adoption fallback (selected=1),Protects the Rs2.5 cr cap; not an automatic spending approval,MY ASSUMPTION,N
+ROADMAP_M1,Eight-month roadmap,M1,programme month,"Owners, data contracts, current Excel import/export, baseline reconciliation",COO names one owner per alert; no planner workflow change yet,MY ASSUMPTION,N
+ROADMAP_M2,Eight-month roadmap,M2,programme month,"QC ingestion, freshness checks, Amber/Red alerts in read-only mode",Two-week parallel run; planners can challenge every alert,MY ASSUMPTION,N
+ROADMAP_M3,Eight-month roadmap,M3,programme month,Weekly bottles and BOM-pulp reforecast; censoring flags,Planner signs proxy assumptions; Excel export matches weekly sheet,MY ASSUMPTION,N
+ROADMAP_M4,Eight-month roadmap,M4,programme month,"Exposure map, constrained capacity, buffer and air-trigger options",COO selects supply package; no automatic purchase or production action,MY ASSUMPTION,N
+ROADMAP_M5,Eight-month roadmap,M5,programme month,"Weekly depot workbook, cover gaps, transfer suggestions",All nine depots upload in one template; missing-sheet fallback drill,MY ASSUMPTION,N
+ROADMAP_M6,Eight-month roadmap,M6,programme month,"Approval log, allocation options, control tower and scenario replay",S&OP dry run proves planner-to-COO escalation and audit trail,MY ASSUMPTION,N
+ROADMAP_M7,Eight-month roadmap,M7,programme month,"End-to-end parallel run, training for 15 planners, vendor hypercare",QC outage and missing-sheet exercises; adoption metrics reviewed weekly,MY ASSUMPTION,N
+ROADMAP_M8,Eight-month roadmap,M8,programme month,Go-live readiness before next summer; fallback and rollback kit,"COO sign-off only if reconciliation, adoption and ownership gates pass",MY ASSUMPTION,N
+LAST_YEAR_MIX_MPB,Opening depot mix,0.5,share,Pre-viral/pre-launch opening-stock share for MPB,Last-year depot mix is not supplied; DP and DB are zero before launch,MY ASSUMPTION,N
+LAST_YEAR_MIX_GC,Opening depot mix,0.2,share,Pre-viral/pre-launch opening-stock share for GC,Last-year depot mix is not supplied; DP and DB are zero before launch,MY ASSUMPTION,N
+LAST_YEAR_MIX_PP,Opening depot mix,0.3,share,Pre-viral/pre-launch opening-stock share for PP,Last-year depot mix is not supplied; DP and DB are zero before launch,MY ASSUMPTION,N
+LAST_YEAR_MIX_DP,Opening depot mix,0.0,share,Pre-viral/pre-launch opening-stock share for DP,Last-year depot mix is not supplied; DP and DB are zero before launch,MY ASSUMPTION,N
+LAST_YEAR_MIX_DB,Opening depot mix,0.0,share,Pre-viral/pre-launch opening-stock share for DB,Last-year depot mix is not supplied; DP and DB are zero before launch,MY ASSUMPTION,N
+SHELF_RULE_GT,Channel shelf-life governance,0,days remaining,GT: Case does not specify a GT remaining-shelf-life rule; zero disables the cutoff until configured,ASSUMED_NO_CUTOFF,MY ASSUMPTION,N
+SHELF_RULE_MT,Channel shelf-life governance,60,days remaining,MT: MT rejects stock with fewer than 60 days remaining,CASE_STATED,MY ASSUMPTION,N
+SHELF_RULE_QC,Channel shelf-life governance,60,days remaining,QC: QC rejects stock with fewer than 60 days remaining,CASE_STATED,MY ASSUMPTION,N

@@ -1,0 +1,6 @@
+flavor_id,flavor_name,summer_share,available_from_md,is_new,share_source,availability_source,VERIFIED_AGAINST_CASE_TEXT
+MPB,Mango Peach Basil,0.38,01-01,0,CASE-STATED,MY ASSUMPTION,N
+GC,Guava Chilli,0.20,01-01,0,CASE-STATED,MY ASSUMPTION,N
+PP,Passionfruit Punch,0.16,01-01,0,CASE-STATED,MY ASSUMPTION,N
+DB,Dragonfruit Bloom,0.14,01-01,0,CASE-STATED,MY ASSUMPTION,N
+DP,Dragon Passion,0.12,03-03,1,CASE-STATED,CASE-STATED,N

@@ -1,0 +1,5 @@
+option_id,option_name,year1_cost_cr,expected_loss_reduction,air_cost_reduction,notes,source,VERIFIED_AGAINST_CASE_TEXT
+PREBUY_BUFFER,Pre-buy frozen pulp buffer,0.00,0.00,0.00,Cost and benefit are calculated by the buffer optimiser; pulp principal is disclosed as working capital,MY ASSUMPTION,N
+SECOND_SUPPLIER,Qualify second passionfruit supplier,0.45,0.65,0.00,Assumes a qualified alternate uses a different geography/route; procurement must not be measured on Rs/kg alone,MY ASSUMPTION,N
+CO_PACKER,Pre-book co-packer headroom,0.20,0.05,0.00,Only helps capacity-constrained losses; it cannot create passionfruit pulp during a route closure,MY ASSUMPTION,N
+AIR_TRIGGER,Pre-book air-freight trigger,0.15,0.35,0.20,Earlier smaller lots and trigger governance; emergency freight remains a fallback not a primary buffer,MY ASSUMPTION,N

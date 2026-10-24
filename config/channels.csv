@@ -1,0 +1,4 @@
+channel_id,channel_name,summer_share,marketing_feed_frequency,planner_feed_frequency,outlet_data_available,share_source,VERIFIED_AGAINST_CASE_TEXT
+GT,General Trade,0.55,Monthly distributor orders,Month-end consolidated,0,CASE-STATED,N
+MT,Modern Trade,0.25,Weekly scan summary,Month-end consolidated,0,CASE-STATED,N
+QC,Quick Commerce,0.20,Daily sell-through,Month-end consolidated,1,CASE-STATED,N

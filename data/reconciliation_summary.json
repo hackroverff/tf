@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "checks": 63,
+  "passed": 63,
+  "failed": 0,
+  "volume_convention": "9.6 cr is latent summer demand; realised sales are separately shown after 8% censoring."
+}

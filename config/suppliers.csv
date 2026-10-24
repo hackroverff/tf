@@ -1,0 +1,9 @@
+supplier_id,pulp_id,supplier_name,qualified_supplier_count,single_source_flag,lead_time_days,normal_cost_per_kg,route_id,qualification_status,source,VERIFIED_AGAINST_CASE_TEXT
+SUP_MANGO,MANGO,Mango growers aggregate,2,0,4,95,R_MANGO,QUALIFIED,MY ASSUMPTION,N
+SUP_PEACH,PEACH,Peach processors aggregate,2,0,5,110,R_PEACH,QUALIFIED,MY ASSUMPTION,N
+SUP_BASIL,BASIL,Basil extract vendor,1,1,7,450,R_BASIL,QUALIFIED,MY ASSUMPTION,N
+SUP_GUAVA,GUAVA,Guava growers aggregate,2,0,4,105,R_GUAVA,QUALIFIED,MY ASSUMPTION,N
+SUP_CHILLI,CHILLI,Chilli extract vendor,1,1,7,600,R_CHILLI,QUALIFIED,MY ASSUMPTION,N
+SUP_PASSION,PASSION,Single hill cooperative,1,1,3,180,R_PASSION,QUALIFIED_NO_SECOND,MY ASSUMPTION,N
+SUP_DRAGON_DOM,DRAGON_DOM,Domestic dragonfruit aggregate,2,0,7,160,R_DRAGON_DOM,QUALIFIED,MY ASSUMPTION,N
+SUP_DRAGON_IMP,DRAGON_IMP,Imported dragonfruit supplier,1,1,49,220,R_DRAGON_IMP,QUALIFIED_NO_SECOND,MY ASSUMPTION,N

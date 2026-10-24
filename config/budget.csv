@@ -1,0 +1,12 @@
+item_id,category,line_item,cost_cr,cost_type,selected,timing,owner,notes,source,VERIFIED_AGAINST_CASE_TEXT
+BUILD,Technology,Vendor-run demand/supply configuration and build,0.35,ONE_TIME_BUILD,1,M1-M4,Vendor + COO nominee,"Config-driven modules, reusable package, no data/AI hire",MY ASSUMPTION,N
+VENDOR_IT,Integration,Vendor IT integration and QC/Excel ingestion,0.20,ONE_TIME_BUILD,1,M1-M3,Vendor IT + Planning IT,"QC feed, weekly depot workbook, ERP import/export; no external API in prototype",MY ASSUMPTION,N
+CLOUD_RUN,Run,Cloud and vendor year-1 operations,0.12,YEAR_1_RUN,1,M2-M12,Vendor IT,Small managed deployment; laptop prototype uses open-source libs,MY ASSUMPTION,N
+TRAINING,Adoption,Change management and training for 15 planners,0.12,YEAR_1_RUN,1,M1-M8,Planning Lead,"Role-based practice, parallel run, one owner per alert",MY ASSUMPTION,N
+WEEKLY_SOP,Adoption,Weekly peak S&OP facilitation,0.10,YEAR_1_RUN,1,M3-M8,S&OP Lead,Weekly during peak; monthly cadence remains outside peak,MY ASSUMPTION,N
+EXCEL_ADOPTION,Adoption,Excel templates and nine-depot onboarding,0.08,YEAR_1_RUN,1,M1-M5,Depot Planning Lead,"Import/export, sheet validation, fallback drills and hypercare",MY ASSUMPTION,N
+SECOND_SUPPLIER,Supply,Qualify alternate passionfruit supplier,0.45,ONE_TIME_BUILD,1,M1-M8,Procurement Lead,Selected within-cash-cap supply option; different geography/route assumption,MY ASSUMPTION,N
+AIR_TRIGGER,Supply,Pre-book air-freight trigger and vendor retainer,0.15,YEAR_1_RUN,1,M4-M8,Procurement + COO,Fallback only; earlier/smaller emergency lots,MY ASSUMPTION,N
+CO_PACKER,Supply,Optional co-packer retainer,0.20,YEAR_1_RUN,0,CONDITIONAL,COO,Not selected: negative route-only economics and cannot solve pulp shortage,MY ASSUMPTION,N
+BUFFER_WORKING_CAPITAL,Supply,Optional one-week frozen-pulp buffer principal,0.00,RECOVERABLE_WORKING_CAPITAL,0,CONDITIONAL,COO,Not in selected package; model-calculated principal shown separately on Supply page,MY ASSUMPTION,N
+CONTINGENCY,Contingency,Programme contingency and adoption fallback,0.20,CONTINGENCY,1,M1-M8,COO,Protects the Rs2.5 cr cap; not an automatic spending approval,MY ASSUMPTION,N

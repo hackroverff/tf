@@ -1,0 +1,9 @@
+route_id,route_name,mode,transit_days,single_route_flag,summer_closure_probability,source,VERIFIED_AGAINST_CASE_TEXT
+R_MANGO,Mango road lane,Road,4,0,0.05,MY ASSUMPTION,N
+R_PEACH,Peach road lane,Road,5,0,0.05,MY ASSUMPTION,N
+R_BASIL,Basil road lane,Road,7,0,0.05,MY ASSUMPTION,N
+R_GUAVA,Guava road lane,Road,4,0,0.05,MY ASSUMPTION,N
+R_CHILLI,Chilli road lane,Road,7,0,0.05,MY ASSUMPTION,N
+R_PASSION,Hill cooperative highway,Road,3,1,0.60,CASE-STATED,N
+R_DRAGON_DOM,Domestic dragonfruit road lane,Road,7,0,0.10,MY ASSUMPTION,N
+R_DRAGON_IMP,Dragonfruit import sea-road lane,Sea and road,49,1,0.10,MY ASSUMPTION,N

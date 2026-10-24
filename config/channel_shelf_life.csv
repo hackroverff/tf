@@ -1,0 +1,4 @@
+channel_id,min_remaining_days,rule_status,rule_basis,source,VERIFIED_AGAINST_CASE_TEXT
+GT,0,ASSUMED_NO_CUTOFF,Case does not specify a GT remaining-shelf-life rule; zero disables the cutoff until configured,MY ASSUMPTION,N
+MT,60,CASE_STATED,MT rejects stock with fewer than 60 days remaining,CASE-STATED,N
+QC,60,CASE_STATED,QC rejects stock with fewer than 60 days remaining,CASE-STATED,N

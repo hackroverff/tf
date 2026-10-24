@@ -1,0 +1,2 @@
+method,uncalibrated_aging_value_cr,case_calibration_target_cr,reported_writeoff_discount_cr,calibration_factor,uncalibrated_minus_target_cr,calibration_gap_cr,aged_bottles_written_off,mt_qc_rule,gt_rule,status
+AGING_STOCK_CALIBRATE_TO_CASE,5.357288700000001,6.0,6.0,1.119969509950061,-0.6427112999999993,0.6427112999999993,892881.4500000001,Reject below 60 days remaining,Case does not specify a GT remaining-shelf-life rule; zero disables the cutoff until configured,CALIBRATED_ALLOCATION_NOT_INDEPENDENT_CASE_VERIFICATION

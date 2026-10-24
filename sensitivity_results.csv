@@ -1,0 +1,74 @@
+test,scenario,metric,value
+Viral ramp shape,A042=1.0,first_amber,2026-03-22
+Viral ramp shape,A042=1.0,first_red,Not triggered
+Viral ramp shape,A042=1.0,headline_alert_lead_days,9
+Viral ramp shape,A042=1.0,amber_lead_days,9
+Viral ramp shape,A042=1.0,red_lead_days,
+Viral ramp shape,A042=1.5,first_amber,2026-03-20
+Viral ramp shape,A042=1.5,first_red,Not triggered
+Viral ramp shape,A042=1.5,headline_alert_lead_days,11
+Viral ramp shape,A042=1.5,amber_lead_days,11
+Viral ramp shape,A042=1.5,red_lead_days,
+Viral ramp shape,A042=2.0,first_amber,2026-03-18
+Viral ramp shape,A042=2.0,first_red,Not triggered
+Viral ramp shape,A042=2.0,headline_alert_lead_days,13
+Viral ramp shape,A042=2.0,amber_lead_days,13
+Viral ramp shape,A042=2.0,red_lead_days,
+Viral ramp shape,A042=2.5 (BASE),first_amber,2026-03-18
+Viral ramp shape,A042=2.5 (BASE),first_red,2026-03-19
+Viral ramp shape,A042=2.5 (BASE),headline_alert_lead_days,12
+Viral ramp shape,A042=2.5 (BASE),amber_lead_days,13
+Viral ramp shape,A042=2.5 (BASE),red_lead_days,12
+Viral ramp shape,A042=3.0,first_amber,2026-03-18
+Viral ramp shape,A042=3.0,first_red,2026-03-19
+Viral ramp shape,A042=3.0,headline_alert_lead_days,12
+Viral ramp shape,A042=3.0,amber_lead_days,13
+Viral ramp shape,A042=3.0,red_lead_days,12
+Closure probability,Closure probability=15%,zero_buffer_expected_loss_cr,0.2857112691335957
+Closure probability,Closure probability=15%,best_buffer_weeks,0.0
+Closure probability,Closure probability=15%,best_net_expected_benefit_cr,0.0
+Closure probability,Closure probability=15%,best_annual_carry_storage_cr,0.0
+Closure probability,Closure probability=15%,best_recoverable_working_capital_cr,0.0
+Closure probability,Closure probability=30%,zero_buffer_expected_loss_cr,0.5714225382671914
+Closure probability,Closure probability=30%,best_buffer_weeks,0.0
+Closure probability,Closure probability=30%,best_net_expected_benefit_cr,0.0
+Closure probability,Closure probability=30%,best_annual_carry_storage_cr,0.0
+Closure probability,Closure probability=30%,best_recoverable_working_capital_cr,0.0
+Closure probability,Closure probability=45%,zero_buffer_expected_loss_cr,0.8571338074007873
+Closure probability,Closure probability=45%,best_buffer_weeks,0.0
+Closure probability,Closure probability=45%,best_net_expected_benefit_cr,0.0
+Closure probability,Closure probability=45%,best_annual_carry_storage_cr,0.0
+Closure probability,Closure probability=45%,best_recoverable_working_capital_cr,0.0
+Closure probability,Closure probability=60% (CASE/BASE),zero_buffer_expected_loss_cr,1.1428450765343827
+Closure probability,Closure probability=60% (CASE/BASE),best_buffer_weeks,1.0
+Closure probability,Closure probability=60% (CASE/BASE),best_net_expected_benefit_cr,0.09461282600985854
+Closure probability,Closure probability=60% (CASE/BASE),best_annual_carry_storage_cr,0.83795988293627
+Closure probability,Closure probability=60% (CASE/BASE),best_recoverable_working_capital_cr,3.2229226266779616
+Closure probability,Closure probability=90%,zero_buffer_expected_loss_cr,1.7142676148015745
+Closure probability,Closure probability=90%,best_buffer_weeks,1.0
+Closure probability,Closure probability=90%,best_net_expected_benefit_cr,0.5608991804829233
+Closure probability,Closure probability=90%,best_annual_carry_storage_cr,0.83795988293627
+Closure probability,Closure probability=90%,best_recoverable_working_capital_cr,3.2229226266779616
+Closure probability,Derived from base table,one_week_carry_break_even_probability,0.5391278609578157
+Buffer objective specification,Add displayed expected air premium to objective,best_buffer_weeks,2.0
+Buffer objective specification,Add displayed expected air premium to objective,best_total_cost_cr,1.67591976587254
+Lost-contribution attribution split,BASE 35/35/15/15,avoided_loss_low_cr,6.325632
+Lost-contribution attribution split,BASE 35/35/15/15,avoided_loss_base_cr,11.643392
+Lost-contribution attribution split,BASE 35/35/15/15,avoided_loss_high_cr,16.432512
+Lost-contribution attribution split,BASE 35/35/15/15,base_payback_months,1.8242106767512423
+Lost-contribution attribution split,Equal 25/25/25/25,avoided_loss_low_cr,6.39936
+Lost-contribution attribution split,Equal 25/25/25/25,avoided_loss_base_cr,11.717120000000001
+Lost-contribution attribution split,Equal 25/25/25/25,avoided_loss_high_cr,16.50624
+Lost-contribution attribution split,Equal 25/25/25/25,base_payback_months,1.8127321389556477
+Lost-contribution attribution split,Route-heavy 15/55/15/15,avoided_loss_low_cr,6.473088
+Lost-contribution attribution split,Route-heavy 15/55/15/15,avoided_loss_base_cr,11.938304
+Lost-contribution attribution split,Route-heavy 15/55/15/15,avoided_loss_high_cr,16.727424
+Lost-contribution attribution split,Route-heavy 15/55/15/15,base_payback_months,1.7791471887464083
+Lost-contribution attribution split,Sensing-heavy 55/15/15/15,avoided_loss_low_cr,6.178176000000001
+Lost-contribution attribution split,Sensing-heavy 55/15/15/15,avoided_loss_base_cr,11.34848
+Lost-contribution attribution split,Sensing-heavy 55/15/15/15,avoided_loss_high_cr,16.1376
+Lost-contribution attribution split,Sensing-heavy 55/15/15/15,base_payback_months,1.8716162869388677
+Lost-contribution attribution split,All stale-mix extreme 0/0/0/100,avoided_loss_low_cr,5.10912
+Lost-contribution attribution split,All stale-mix extreme 0/0/0/100,avoided_loss_base_cr,10.05824
+Lost-contribution attribution split,All stale-mix extreme 0/0/0/100,avoided_loss_high_cr,14.84736
+Lost-contribution attribution split,All stale-mix extreme 0/0/0/100,base_payback_months,2.1117014507508274

@@ -1,0 +1,9 @@
+event_date,event_type,event,source,details,VERIFIED_AGAINST_CASE_TEXT
+2026-03-03,LAUNCH,Dragon Passion launch,CASE-STATED,Two-week procurement notice,N
+2026-03-17,VIRAL,Influencer reel; QC ramp starts,CASE-STATED,4x ramp over 14 days,N
+2026-03-31,NOTICE,Planners notice distributor shortages,MY ASSUMPTION,Exact notice date is synthetic,N
+2026-04-28,RIVAL,Rival dragonfruit-passionfruit launch,MY ASSUMPTION,42 days after viral start; within the case's 42-day window,N
+2026-05-10,CLOSURE,Passionfruit highway closes,CASE-STATED,Single road route,N
+2026-05-17,AIR_BOOK,Emergency air freight booked,MY ASSUMPTION,Closure week 2,N
+2026-05-20,AIR_ARRIVAL,Emergency air pulp arrives,MY ASSUMPTION,Three-day booking-to-arrival lag,N
+2026-05-30,REOPEN,Highway reopens after 21 days,CASE-STATED,Regular road lead time then applies,N

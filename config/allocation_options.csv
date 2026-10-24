@@ -1,0 +1,4 @@
+option_id,option_name,dp_pulp_share,decision_logic,trade_off,source,VERIFIED_AGAINST_CASE_TEXT
+PROTECT_DP,Protect Dragon Passion,0.70,Prioritise higher contribution per passionfruit kg and rival defence,Passionfruit Punch delisting and core-GT service risk rises,MY ASSUMPTION,N
+PROTECT_PP,Protect Passionfruit Punch,0.30,Prioritise incumbent flavor and broad depot distribution,Lower contribution per passionfruit kg and higher rival-share loss,MY ASSUMPTION,N
+BALANCED,Balance launch and incumbent,0.55,Preserve meaningful service in both flavors,Neither flavor is fully protected; requires explicit COO trade-off,MY ASSUMPTION,N

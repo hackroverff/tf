@@ -1,0 +1,9 @@
+month,phase,live_capability,adoption_gate,owner,source,VERIFIED_AGAINST_CASE_TEXT
+M1,Mobilise,"Owners, data contracts, current Excel import/export, baseline reconciliation",COO names one owner per alert; no planner workflow change yet,COO + Planning Lead,MY ASSUMPTION,N
+M2,Sense,"QC ingestion, freshness checks, Amber/Red alerts in read-only mode",Two-week parallel run; planners can challenge every alert,Demand Planning Lead,MY ASSUMPTION,N
+M3,Reforecast,Weekly bottles and BOM-pulp reforecast; censoring flags,Planner signs proxy assumptions; Excel export matches weekly sheet,Demand + Supply Planners,MY ASSUMPTION,N
+M4,Plan supply,"Exposure map, constrained capacity, buffer and air-trigger options",COO selects supply package; no automatic purchase or production action,Supply + Procurement Leads,MY ASSUMPTION,N
+M5,Balance,"Weekly depot workbook, cover gaps, transfer suggestions",All nine depots upload in one template; missing-sheet fallback drill,Depot Planning Lead,MY ASSUMPTION,N
+M6,Decide,"Approval log, allocation options, control tower and scenario replay",S&OP dry run proves planner-to-COO escalation and audit trail,S&OP Lead,MY ASSUMPTION,N
+M7,Harden,"End-to-end parallel run, training for 15 planners, vendor hypercare",QC outage and missing-sheet exercises; adoption metrics reviewed weekly,Planning Lead + Vendor,MY ASSUMPTION,N
+M8,Ready,Go-live readiness before next summer; fallback and rollback kit,"COO sign-off only if reconciliation, adoption and ownership gates pass",COO,MY ASSUMPTION,N

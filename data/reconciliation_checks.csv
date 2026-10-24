@@ -1,0 +1,64 @@
+check_id,category,check_name,actual,expected,tolerance,unit,status,interpretation
+VOL_01,Volume,Annual bottles derived from revenue / price,200000000.0,200000000.0,0.1,bottles,PASS,CASE
+VOL_02,Volume,Summer latent demand reconciles to 9.6 cr bottles,96000000,96000000,0.0,bottles,PASS,CASE
+VOL_03,Volume,Jan-Feb latent demand,26000000,26000000,0.0,bottles,PASS,MY ASSUMPTION
+VOL_04,Volume,Summer share of annual bottle volume,0.48,0.48,1e-12,fraction,PASS,DERIVED FROM CASE; equal bottle price
+LOSS_01,Loss,Summer stock-out-censored bottles,7680000,7680000,0.0,bottles,PASS,CASE
+LOSS_02,Loss,Lost revenue at Rs60/bottle,46.08,46.08,1e-08,Rs cr,PASS,CASE
+LOSS_03,Loss,Lost contribution at 32%,14.7456,14.7456,1e-08,Rs cr,PASS,CASE
+LOSS_04,Loss,Realised summer sales after censoring,88320000,88320000,0.0,bottles,PASS,DERIVED
+LOSS_05,Loss,Lost demand as share of latent summer demand,0.08,0.08,1e-12,fraction,PASS,CASE
+MIX_F_MPB,Flavor mix,Latent volume: Mango Peach Basil,36480000,36480000,3.0,bottles,PASS,CONFIG_WITH_INTEGER_ROUNDING
+MIX_F_GC,Flavor mix,Latent volume: Guava Chilli,19200000,19200000,3.0,bottles,PASS,CONFIG_WITH_INTEGER_ROUNDING
+MIX_F_PP,Flavor mix,Latent volume: Passionfruit Punch,15360000,15360000,3.0,bottles,PASS,CONFIG_WITH_INTEGER_ROUNDING
+MIX_F_DB,Flavor mix,Latent volume: Dragonfruit Bloom,13440000,13440000,3.0,bottles,PASS,CONFIG_WITH_INTEGER_ROUNDING
+MIX_F_DP,Flavor mix,Latent volume: Dragon Passion,11520000,11520000,3.0,bottles,PASS,CONFIG_WITH_INTEGER_ROUNDING
+MIX_C_GT,Channel mix,Latent volume: General Trade,52800000,52800000,5.0,bottles,PASS,CONFIG_WITH_INTEGER_ROUNDING
+MIX_C_MT,Channel mix,Latent volume: Modern Trade,24000000,24000000,5.0,bottles,PASS,CONFIG_WITH_INTEGER_ROUNDING
+MIX_C_QC,Channel mix,Latent volume: Quick Commerce,19200000,19200000,5.0,bottles,PASS,CONFIG_WITH_INTEGER_ROUNDING
+CAP_01,Capacity,Fixed in-house summer capacity,100000000,100000000,0.0,bottles,PASS,CASE
+CAP_02,Capacity,Actual summer production,95000000,95000000,0.0,bottles,PASS,CASE
+CAP_03,Capacity,Summer utilisation,0.95,0.95,1e-12,fraction,PASS,CASE
+CAP_04,Capacity,Pulp constraints reallocate rather than lose scheduled plant volume,95000000,95000000,0.0,bottles,PASS,DERIVED
+CAP_05,Capacity,2 plants at case utilisation in monthly capacity table,0.95,0.95,1e-12,fraction,PASS,CASE
+EVENT_01,Events,Dragon Passion first demand date,2026-03-03 00:00:00,2026-03-03 00:00:00,1e-08,date,PASS,CASE
+EVENT_02,Events,Pre-launch Dragon Passion demand,0,0,0.0,bottles,PASS,CASE
+EVENT_03,Events,Viral ramp starts,2026-03-17 00:00:00,2026-03-17 00:00:00,1e-08,date,PASS,CASE
+EVENT_04,Events,QC multiplier reaches 4x after 14 days,4.0,4.0,1e-12,multiplier,PASS,CASE
+EVENT_05,Events,Viral ramp duration,14,14,0.0,days,PASS,CASE
+EVENT_06,Events,Highway closure duration,21,21,0.0,days,PASS,CASE
+FEED_01,Latency,QC feed is daily,181,181,0.0,days,PASS,CASE
+FEED_02,Latency,QC sales reconcile to daily sales QC,22844441,22844441,0.0,bottles,PASS,CASE
+FEED_03,Forecast,Flavor x depot WAPE,0.30000000000000004,0.3,1e-12,fraction,PASS,CASE
+NET_01,Network,Depot count,9,9,0.0,depots,PASS,CONFIG; base case=9
+NET_02,Network,Region count,4,4,0.0,regions,PASS,CONFIG; base case=4
+NET_03,Network,Flavor count,5,5,0.0,flavors,PASS,CASE
+NET_04,Network,Channel count,3,3,0.0,channels,PASS,CASE
+EXP_01,Exposure,Passionfruit-dependent summer volume,26880000,26880000,15.0,bottles,PASS,CONFIG_WITH_INTEGER_ROUNDING
+EXP_02,Exposure,Passionfruit-dependent revenue,161.28,161.28000000000003,9e-05,Rs cr,PASS,CONFIG_WITH_INTEGER_ROUNDING
+EXP_03,Exposure,Passionfruit-dependent volume share,0.28,0.28,1.5625e-07,fraction,PASS,CONFIG_WITH_INTEGER_ROUNDING
+PULP_01,Pulp,Minimum closing pulp inventory,0.0543055556163381,0.0,1e-06,kg,PASS,NON_NEGATIVITY
+PULP_02,Pulp,Passionfruit baseline cover at closure start,14.0,14.0,1e-08,days,PASS,CASE
+PULP_03,Pulp,Road arrivals during 21-day closure,0,0,0.0,shipments,PASS,CASE
+AIR_01,Air freight,Emergency air actual cost,3.2,3.2,1e-08,Rs cr,PASS,CASE
+AIR_02,Air freight,Emergency air cost multiple,5.0,5.0,1e-12,multiplier,PASS,CASE
+AIR_03,Air freight,Air booking in closure week 2,2026-05-17 00:00:00,2026-05-17 00:00:00,1e-08,date,PASS,ASSUMPTION
+WRITE_01,Depot imbalance,Reported write-offs follow the disclosed calibration mode,6.0,6.0,1e-08,Rs cr,PASS,CASE CALIBRATION TARGET
+WRITE_02,Depot imbalance,Every write-off breaches its channel remaining-shelf cutoff,0,0,0.0,rows,PASS,DERIVED FROM FIFO STOCK AGING
+WRITE_03,Depot imbalance,Write-off calibration gap arithmetic,0.6427112999999993,0.6427112999999993,1e-08,Rs cr,PASS,DISCLOSED CALIBRATION GAP
+WRITE_04,Depot imbalance,Uncalibrated aging value ties to write-off rows,5.357288700000001,5.357288700000001,1e-08,Rs cr,PASS,MODEL
+WRITE_05,Depot imbalance,MT/QC 60-day rule is explicit and config-driven,60.0,60.0,0.0,days,PASS,CASE
+WRITE_06,Depot imbalance,GT unspecified rule is an editable config toggle,True,True,1e-08,boolean,PASS,MY ASSUMPTION
+CONSERVE_01,Conservation,Maximum absolute daily depot balance error,0.0,0.0,1e-06,bottles,PASS,PHYSICAL IDENTITY
+CONSERVE_02,Conservation,Depot receipts equal actual production,121000000.0,121000000.0,1e-06,bottles,PASS,PHYSICAL IDENTITY
+CONSERVE_03,Conservation,Depot issues equal realised daily sales,114320000.0,114320000.0,1e-06,bottles,PASS,PHYSICAL IDENTITY
+CONSERVE_04,Conservation,No negative closing depot stock after write-offs,0,0,0.0,rows,PASS,NON_NEGATIVITY
+CONSERVE_05,Conservation,Opening DP stock is zero in last-year mix,0.0,0.0,0.0,bottles,PASS,MY ASSUMPTION
+CONSERVE_06,Conservation,Opening stock follows three-week last-year mix,0.5999999998603016,0.0,9.0,bottles,PASS,CONFIG WITH INTEGER ROUNDING
+ASSUME_01,Governance,Every exported assumption is flagged MY ASSUMPTION,True,True,1e-08,boolean,PASS,CASE
+ASSUME_02,Governance,No duplicate assumption IDs,True,True,1e-08,boolean,PASS,CASE
+ASSUME_03,Governance,Case-text verification field contains only Y/N,True,True,1e-08,boolean,PASS,CASE
+ASSUME_04,Governance,All case-marked rows remain unverified without source text,True,True,1e-08,boolean,PASS,CASE
+DATA_01,Data quality,Daily sales key is unique,True,True,1e-08,boolean,PASS,CASE
+DATA_02,Data quality,Sales plus losses equal latent demand,0,0,0.0,bottles,PASS,CASE
+DATA_03,Data quality,No negative realised sales,0,0,0.0,rows,PASS,CASE

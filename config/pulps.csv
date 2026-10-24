@@ -1,0 +1,9 @@
+pulp_id,pulp_name,opening_cover_days,frozen_shelf_life_days,cover_source,VERIFIED_AGAINST_CASE_TEXT
+MANGO,Mango pulp,21,180,MY ASSUMPTION,N
+PEACH,Peach pulp,21,180,MY ASSUMPTION,N
+BASIL,Basil extract,21,180,MY ASSUMPTION,N
+GUAVA,Guava pulp,21,180,MY ASSUMPTION,N
+CHILLI,Chilli extract,21,180,MY ASSUMPTION,N
+PASSION,Passionfruit pulp,21,180,MY ASSUMPTION,N
+DRAGON_DOM,Domestic dragonfruit pulp,21,180,MY ASSUMPTION,N
+DRAGON_IMP,Imported dragonfruit pulp,42,180,MY ASSUMPTION,N
